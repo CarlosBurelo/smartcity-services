@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  auth:
+    build: ../microservices/auth
+    ports:
+      - "5001:5000"
+
+  users:
+    build: ../microservices/users
+    ports:
+      - "5002:5000"
+
+  data:
+    build: ../microservices/data
+    ports:
+      - "5003:5000"
+
+  notifications:
+    build: ../microservices/notifications
+    ports:
+      - "5004:5000"
